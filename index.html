@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <div class="nav-brand">WanderSpot</div>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#todo">Plan Trip</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <select id="planTripSelect" class="plantrip-select">
+          <option value="">Plan Trip Lists</option>
+          <option value="pending">Pending Tasks</option>
+        </select>
+
+        <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+      </nav>
+      <h1 id="heading">WanderSpot – Discover Local Wonders of Kerala</h1>
+      <p id="tag">
+        Wander through Kerala – Where Nature Whispers and Culture Speaks.
+      </p>
+    </header>
+    <main>
+      <section id="hero">
+        <img src="images/Kerala-Tour.jpg" alt="" />
+      </section>
+
+      <section id="gallery">
+        <h2>📷 Discover Kerala Through Photos</h2>
+
+        <div class="gallery-grid">
+          <figure class="gallery-item">
+            <a
+              href="https://maps.google.com/?q=Alleppey+Backwaters"
+              target="_blank"
+            >
+              <img src="images/alleppey.jpg" alt="Alleppey Backwaters" />
+              <figcaption>Alleppey Backwaters</figcaption></a
+            >
+          </figure>
+          <figure class="gallery-item">
+            <a
+              href="https://maps.google.com/?q=Munnar+Tea+Gardens"
+              target="_blank"
+            >
+              <img src="images/munnar.jpg" alt="Munnar Hills" />
+              <figcaption>Munnar Tea Gardens</figcaption></a
+            >
+          </figure>
+          <figure class="gallery-item">
+            <a
+              href="https://maps.google.com/?q=Kathakali+Theatre+Kerala"
+              target="_blank"
+            >
+              <img src="images/kathakali.jpg" alt="Kathakali Performance" />
+
+              <figcaption>Kathakali Performance</figcaption></a
+            >
+          </figure>
+          <figure class="gallery-item">
+            <a
+              href="https://maps.google.com/?q=Kerala+Houseboat+Alleppey"
+              target="_blank"
+            >
+              <img src="images/Houseboat.jpg" alt="Kerala Houseboat" />
+
+              <figcaption>Houseboat Experience</figcaption></a
+            >
+          </figure>
+          <figure class="gallery-item">
+            <a
+              href="https://maps.google.com/?q=Sadhya+Traditional+Food+Kerala"
+              target="_blank"
+            >
+              <img src="images/sadhya.jpg" alt="Traditional Kerala Food" />
+
+              <figcaption>Traditional Kerala Sadhya</figcaption></a
+            >
+          </figure>
+          <figure class="gallery-item">
+            <a
+              href="https://maps.google.com/?q=Vallam+Kali+Boat+Race+Kerala"
+              target="_blank"
+            >
+              <img src="images/vallamkali.jpg" alt="Vallam Kali Boat Race" />
+
+              <figcaption>Vallam Kali – Boat Race</figcaption></a
+            >
+          </figure>
+          <figure class="gallery-item">
+            <a
+              href="https://maps.google.com/?q=Padmanabhaswamy+Temple+Kerala"
+              target="_blank"
+            >
+              <img
+                src="images/padmanabhaswamy-temple.jpeg"
+                alt="Vallam Kali Boat Race"
+              />
+
+              <figcaption>
+                Scared Serenity - Padmanabhaswamy Temple
+              </figcaption></a
+            >
+          </figure>
+          <figure class="gallery-item">
+            <a
+              href="https://maps.google.com/?q=Thrissur+Pooram+Elephant+Festival"
+              target="_blank"
+            >
+              <img src="images/elephant.webp" alt="Vallam Kali Boat Race" />
+              <figcaption>
+                Magestic Moments - Elephant Festival Parade
+              </figcaption></a
+            >
+          </figure>
+        </div>
+      </section>
+
+      <section id="todo">
+        <h2>📝 Plan Your Kerala Adventure</h2>
+        <div class="overlay">
+          <!-- Task Input -->
+          <form id="todo-form">
+            <label for="new-task">Add a new experience:</label><br />
+            <input
+              type="text"
+              id="new-task"
+              name="new-task"
+              placeholder="e.g., Visit Alleppey Backwaters"
+            />
+            <button id="add-btn" type="submit">Add</button>
+          </form>
+
+          <!-- Default To-Do List -->
+          <ul id="todo-list"></ul>
+          <ul id="default">
+            <li class="default-list">Visit Alleppey Backwaters</li>
+            <li class="default-list">Try Kerala Sadhya</li>
+            <li class="default-list">Attend a local festival</li>
+            <li class="default-list">Stay at a homestay</li>
+            <li class="default-list">Explore Munnar tea gardens</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="contact" required>
+        <h2>Get in Touch</h2>
+        <form action="" id="contact-form">
+          <label for="name">Name:</label>
+          <input
+            type="text"
+            id="name"
+            placeholder="Enter Full Name"
+            class="place"
+            required
+          />
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="Enter your mail"
+            class="place"
+            required
+          />
+          <label for="subject">Subject:</label>
+          <select name="subject" id="subject" required>
+            <option value="">-- Select Subject --</option>
+            <option value="tourism-inquiry">🏞️ Tourism Inquiry</option>
+            <option value="accommodation-info">
+              🏠 Homestay / Accommodation Info
+            </option>
+            <option value="food-culture">
+              🍽️ Local Food & Culture Suggestions
+            </option>
+            <option value="festival-updates">
+              🎉 Festival & Event Updates
+            </option>
+            <option value="partnership">🤝 Partnership / Collaboration</option>
+            <option value="photo-submission">
+              📷 Photo Submission / Gallery Contribution
+            </option>
+            <option value="feedback">🛠️ Website Feedback</option>
+            <option value="other">✉️ Other</option>
+          </select>
+          <div id="other-textarea" style="display: none; margin-top: 10px">
+            <label for="other-subject">Please specify:</label>
+            <textarea
+              id="other-subject"
+              placeholder="Enter your subject..."
+            ></textarea>
+          </div>
+          <button type="submit" id="submit-btn">Send Message</button>
+        </form>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>About WanderSpot</h4>
+          <p>Explore Kerala's hidden gems and plan unforgettable trips.</p>
+        </div>
+
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#todo">Plan Trip</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Contact Us</h4>
+          <p>Email: info@wanderspot.com</p>
+          <p>Phone: +91 xxxxxxxxx</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 WanderSpot. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
